@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    background-color: #f0f0f0;
+}
+
+ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+a {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    color: black;
+    font-style: normal;
+    text-decoration: none;
+}
