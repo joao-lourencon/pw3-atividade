@@ -1,1 +1,55 @@
-<p>login-page works!</p>
+<div class="left">
+    <h1 class="login">Login</h1>
+
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="div">
+            <label for="username">Nome de Usuário</label>
+            <input type="text" name="username" id="username" formControlName="username">
+            @if (formulario.get('username')?.touched && formulario.get('username')?.invalid) {
+                <div>
+                    @if (formulario.get('username')?.errors?.['required']) {
+                    <small>Nome de usuário é obrigatório</small>
+                    }
+                </div>
+            }
+        </div>
+        
+        <div class="div" formGroupName="passwords">
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" formControlName="password">
+            @if (formulario.get('passwords.password')?.touched && formulario.get('passwords.password')?.invalid) {
+                <div>
+                    @if (formulario.get('passwords.password')?.errors?.['required']) {
+                    <small>Senha é obrigatória</small>
+                    }
+                </div>
+            }
+ 
+            <label for="confirm-password">Confirmar senha</label>
+            <input type="password" name="confirm-password" id="confirm-password" formControlName="confirmPassword">
+            @if (formulario.get('passwords.confirmPassword')?.touched && formulario.get('passwords.confirmPassword')?.invalid) {
+                <div>
+                    @if (formulario.get('passwords.confirmPassword')?.errors?.['required']) {
+                    <small>Confirmar senha é obrigatório</small>
+                    }
+                </div>
+            }
+
+            @if (formulario.get('passwords')?.errors?.['senhasDiferentes'] &&
+            (formulario.get('passwords.password')?.touched || formulario.get('passwords.confirmPassword')?.touched)) {
+                <div>
+                <small>As senhas não são iguais</small>
+                </div>
+            }
+        </div>
+        
+        <div>
+            <input type="submit" value="Enviar">
+        </div>
+    </form>
+</div>
+
+<div class="right">
+    <h1 class="welcome">Bem-vindo à <br> <span>RxLog</span></h1>
+    <p>sua gestão inteligente.</p>
+</div>

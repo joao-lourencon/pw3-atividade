@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noticia+Text:wght@400;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:host {
+    display: flex;
+}
+
+.left, .right {
+    width: 100vw;
+    height: 100vh;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    background-color: #059669;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.6em;
+    border-radius: 50% 0px 0px 0%;
+}
+
+.login {
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: #059669;
+}
+
+label {
+    margin-left: 1em;
+    font-family: 'Roboto';
+    color: #059669;
+}
+
+input[type="submit"] {
+    color: white;
+    font-size: .9em;
+    font-family: 'Roboto';
+    background-color: #059669;
+    border: none;
+    width: 60%;
+    height: 40px;
+    border-radius: 30px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    height: 40px;
+    background-color: #cdeae1;
+    margin-top: 3px;
+    padding-left: 15px;
+    outline: none;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+form {
+    padding: 50px;
+    width: 90%;
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome {
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: white;
+    font-size: 2.8em;
+}
+
+span {
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Roboto';
+    font-size: 1.6em;
+    color: white;
+}
